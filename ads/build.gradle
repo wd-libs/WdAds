@@ -104,9 +104,9 @@ publishing {
             afterEvaluate {
                 from(components["release"])
             }
-            groupId = "com.github.quyenvnu"
-            artifactId = "JMM-Studio"
-            version = "2.1.4"
+            groupId = "com.github.wd-libs"
+            artifactId = "WD-Studio"
+            version = "1.0.1"
         }
     }
 }
