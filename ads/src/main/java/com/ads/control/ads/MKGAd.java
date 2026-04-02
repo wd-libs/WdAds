@@ -1410,6 +1410,13 @@ public class MKGAd {
                         apRewardAd.setAdmobReward(rewardedAd);
                         callback.onAdLoaded();
                     }
+
+                    @Override
+                    public void onAdFailedToLoad(@Nullable LoadAdError i) {
+                        super.onAdFailedToLoad(i);
+                        callback.onAdFailedToLoad(new ApAdError(new AdError(0, "Ad Load Failed", "Reward")));
+                    }
+
                 }, adConfig.getAdjustTokenTiktok());
                 return apRewardAd;
             case MKAdConfig.PROVIDER_MAX:
